@@ -42,21 +42,21 @@ const SentenceRevealLoop = ({
   }, [visibleWords, showFull, sentenceIndex, words.length, sentences.length, wordInterval, holdTime]);
 
   return (
-            <Box 
-                borderRadius={5} bgcolor='#75d162ff' p={2.5}
-                sx={{
-                    width: { xs: '100%', md: 430 },
-                    height: 50,
-                    opacity: 0,
-                    animation: "fadeIn 0.5s forwards",
-                }}
-            >
-        <Typography fontSize='15px' sx={{ fontWeight: 700, lineHeight: 1.4, whiteSpace: 'pre-wrap' }}>
-          {showFull
-            ? sentences[sentenceIndex]
-            : words.slice(0, visibleWords).join(" ")}
-        </Typography>
-      </Box>
+    <Box 
+      borderRadius={5} bgcolor='#75d162ff'
+      sx={{
+        width: '100%',
+        height: 80,
+        opacity: 0,
+        animation: "fadeIn 0.5s forwards",
+      }}
+    >
+      <Typography p={1.5} fontSize='15px' sx={{ fontWeight: 700, lineHeight: 1.4, whiteSpace: 'pre-wrap', wordBreak: "break-word" }}>
+        {showFull
+          ? sentences[sentenceIndex]
+          : words.slice(0, visibleWords).join(" ")}
+      </Typography>
+    </Box>
   );
 };
 

@@ -29,7 +29,7 @@ const ImageSlideshow = ({
   return (
     <Box
       sx={{
-        width: { xs: '100%', md: 430 },
+        width: '100%',
         height: { xs: 300, md: 500 },
         position: "relative",
         overflow: "hidden",

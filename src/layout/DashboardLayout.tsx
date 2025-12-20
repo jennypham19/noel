@@ -43,6 +43,7 @@ const DashboardLayout = () => {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
+                    p: 1.5,
                 }}
             >
                 <Outlet/>

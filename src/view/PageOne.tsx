@@ -16,7 +16,7 @@ const images = [image, image_1, image_2, image_3, image_4, image_5, image_6, ima
 
 const PageOne = () => {
     return(
-        <Box p={1} gap={2} display='flex' flexDirection='column'>
+        <Box sx={{ width: { xs: '100%', md: 430 } }} p={1} gap={2} display='flex' flexDirection='column'>
             <Box flexDirection='row' display='flex' alignItems='center' justifyContent='center'>
                 🎄<Typography sx={{ color: '#832811ff' }} fontFamily='fantasy' mx={1.5} fontSize='30px'>
                     Merry Christmas
@@ -26,18 +26,18 @@ const PageOne = () => {
                 images={images}
                 interval={4000}
             />
-                <SentenceRevealLoop
-                    sentences={[
-                        "Chúc Bae một mùa Giáng sinh an lành, trái tim luôn ấm áp và ngập tràn tiếng cười 🎄😊",
-                        "Mong Noel này mang đến cho Bae thật nhiều may mắn và những điều bất ngờ dễ thương ❄️🎁",
-                        "Cảm ơn vì đã luôn ở bên cạnh suốt những năm qua, chúc tình bạn mình mãi bền lâu 💖🤝",
-                        "Chúc Bae đạt được mọi điều mong muốn và luôn vững vàng trước mọi thử thách 🌟💪",
-                        "Noel đến rồi, mong Bae luôn được yêu thương theo cách dịu dàng nhất 🎅💝",
-                        "Chúc cô gái của chị một mùa đông không lạnh vì luôn có hạnh phúc bên cạnh ☃️🔥"
-                    ]}
-                    wordInterval={600} // thời gian từng từ xuất hiện
-                    holdTime={3000}    // giữ nguyên câu cuối vài giây
-                />
+            <SentenceRevealLoop
+                sentences={[
+                    "Chúc Bae một mùa Giáng sinh an lành, trái tim luôn ấm áp và ngập tràn tiếng cười 🎄😊",
+                    "Mong Noel này mang đến cho Bae thật nhiều may mắn và những điều bất ngờ dễ thương ❄️🎁",
+                    "Cảm ơn vì đã luôn ở bên cạnh suốt những năm qua, chúc tình bạn mình mãi bền lâu 💖🤝",
+                    "Chúc Bae đạt được mọi điều mong muốn và luôn vững vàng trước mọi thử thách 🌟💪",
+                    "Noel đến rồi, mong Bae luôn được yêu thương theo cách dịu dàng nhất 🎅💝",
+                    "Chúc cô gái của chị một mùa đông không lạnh vì luôn có hạnh phúc bên cạnh ☃️🔥"
+                ]}
+                wordInterval={600} // thời gian từng từ xuất hiện
+                holdTime={3000}    // giữ nguyên câu cuối vài giây
+            />
             <style>
                 {`
                     @keyframes fadeIn {

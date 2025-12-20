@@ -16,7 +16,7 @@ const images = [image, image_1, image_2, image_3, image_4, image_5, image_6, ima
 
 const PageThree = () => {
     return(
-        <Box p={1} gap={2} display='flex' flexDirection='column'>
+        <Box sx={{ width: { xs: '100%', md: 430 } }} p={1} gap={2} display='flex' flexDirection='column'>
             <Box flexDirection='row' display='flex' alignItems='center' justifyContent='center'>
                 🎄<Typography sx={{ color: '#832811ff' }} fontFamily='fantasy' mx={1.5} fontSize='30px'>
                     Merry Christmas
