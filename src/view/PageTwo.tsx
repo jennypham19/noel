@@ -1,6 +1,4 @@
 import { Box, Typography } from "@mui/material"
-import { useEffect, useRef } from "react";
-import musicMp3 from "@/assets/video/hoa-nhip-giang-sinh.mp3";
 import image from "@/assets/imgs/t.jpg";
 import image_1 from "@/assets/imgs/t-1.jpg";
 import image_2 from "@/assets/imgs/t-2.jpg";
@@ -19,48 +17,6 @@ import SentenceRevealLoop from "./components/SentenceRevealLoop";
 const images = [image, image_1, image_2, image_3, image_4, image_5, image_6, image_7, image_8, image_9, image_10, image_11]
 
 const PageTwo = () => {
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-
-    // useEffect(() => {
-    //     const audio = new Audio(musicMp3);
-    //     audio.loop = true;
-    //     audio.volume = 0.6;
-    //     audioRef.current = audio;
-
-    //     const tryPlay = async () => {
-    //     try {
-    //         await audio.play();
-    //         console.log("🎶 Music started");
-    //     } catch {
-    //         console.log("⛔ Autoplay blocked, waiting for user interaction");
-
-    //         // 🔑 chờ click đầu tiên
-    //         const resumeOnClick = async () => {
-    //         try {
-    //             await audio.play();
-    //             console.log("🎶 Music resumed after click");
-    //             document.removeEventListener("click", resumeOnClick);
-    //         } catch {}
-    //         };
-
-    //         document.addEventListener("click", resumeOnClick);
-    //     }
-    //     };
-
-    //     // chỉ autoplay nếu user đã từng bật nhạc
-    //     const hasEnabledMusic =
-    //     localStorage.getItem("noel_music_enabled") === "true";
-
-    //     if (hasEnabledMusic) {
-    //     tryPlay();
-    //     }
-
-    //     return () => {
-    //     audio.pause();
-    //     audioRef.current = null;
-    //     };
-    // }, []);
-
     return(
         <Box p={1} gap={2} display='flex' flexDirection='column'>
             <Box flexDirection='row' display='flex' alignItems='center' justifyContent='center'>

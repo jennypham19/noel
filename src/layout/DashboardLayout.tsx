@@ -1,39 +1,10 @@
-import { Box, Button } from "@mui/material";
+import { Box} from "@mui/material";
 import Snowfall from "react-snowfall";
-import { useEffect, useRef, useState } from "react";
-
 import backgroundImg from "@/assets/imgs/images.jpg";
-import musicMp3 from "@/assets/video/hoa-nhip-giang-sinh.mp3";
 import snow from "@/assets/imgs/hoa-tuyet.png";
 import { Outlet } from "react-router-dom";
 
 const DashboardLayout = () => {
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-    const [userInteracted, setUserInteracted] = useState(false);
-
-    // useEffect(() => {
-    //     const audio = new Audio(musicMp3);
-    //     audio.loop = true;
-    //     audio.volume = 0.6;
-    //     audioRef.current = audio;
-
-    //     return () => {
-    //     audio.pause();
-    //     audioRef.current = null;
-    //     };
-    // }, []);
-
-    const startMusic = async () => {
-        if (!audioRef.current) return;
-
-        try {
-        await audioRef.current.play();
-        setUserInteracted(true);
-        } catch (err) {
-        console.warn("Autoplay bị chặn:", err);
-        }
-    };
-
     const snowflake1 = document.createElement('img')
     snowflake1.src = snow;
     const snowflake2 = document.createElement('img')
@@ -76,36 +47,6 @@ const DashboardLayout = () => {
             >
                 <Outlet/>
             </Box>
-
-            {/* 🚨 Overlay bật nhạc */}
-            {/* {!userInteracted && (
-                <Box
-                onClick={startMusic}
-                sx={{
-                    position: "fixed",
-                    inset: 0,
-                    zIndex: 5,
-                    background: "rgba(0,0,0,0.55)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                }}
-                >
-                <Button
-                    variant="contained"
-                    size="large"
-                    sx={{
-                    fontSize: 18,
-                    px: 4,
-                    py: 1.5,
-                    borderRadius: 3,
-                    }}
-                >
-                    🎶 Click để bật nhạc Noel
-                </Button>
-                </Box>
-            )} */}
         </Box>
     )
 }
