@@ -1,13 +1,12 @@
-import './App.css'
-import Dashboard from './view/Dashboard';
-
+import Routers from './routes';
+import { AudioProvider } from "@/context/AudioProvider";
 
 function App() {
 
   return (
-    <>
-      <Dashboard/>
-    </>
+    <AudioProvider>
+      <Routers/>
+    </AudioProvider>
   )
 }
 
