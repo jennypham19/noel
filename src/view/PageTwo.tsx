@@ -31,7 +31,7 @@ const PageTwo = () => {
             <Box 
                 borderRadius={5} bgcolor='#75d162ff' p={2.5}
                 sx={{
-                    width: { xs: 260, md: 400 },
+                    width: { xs: 300, md: 400 },
                     height: 50,
                     opacity: 0,
                     animation: "fadeIn 0.5s forwards",
