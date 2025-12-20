@@ -26,15 +26,6 @@ const PageOne = () => {
                 images={images}
                 interval={4000}
             />
-            <Box 
-                borderRadius={5} bgcolor='#75d162ff' p={2.5}
-                sx={{
-                    width: { xs: 300, md: 400 },
-                    height: 50,
-                    opacity: 0,
-                    animation: "fadeIn 0.5s forwards",
-                }}
-            >
                 <SentenceRevealLoop
                     sentences={[
                         "Chúc Bae một mùa Giáng sinh an lành, trái tim luôn ấm áp và ngập tràn tiếng cười 🎄😊",
@@ -47,7 +38,6 @@ const PageOne = () => {
                     wordInterval={600} // thời gian từng từ xuất hiện
                     holdTime={3000}    // giữ nguyên câu cuối vài giây
                 />
-            </Box>
             <style>
                 {`
                     @keyframes fadeIn {

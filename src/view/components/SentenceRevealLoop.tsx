@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
 interface SentenceRevealLoopProps {
@@ -42,11 +42,21 @@ const SentenceRevealLoop = ({
   }, [visibleWords, showFull, sentenceIndex, words.length, sentences.length, wordInterval, holdTime]);
 
   return (
-      <Typography fontSize='15px' sx={{ fontWeight: 700, lineHeight: 1.4, whiteSpace: 'pre-wrap' }}>
-        {showFull
-          ? sentences[sentenceIndex]
-          : words.slice(0, visibleWords).join(" ")}
-      </Typography>
+            <Box 
+                borderRadius={5} bgcolor='#75d162ff' p={2.5}
+                sx={{
+                    width: { xs: '100%', md: 430 },
+                    height: 50,
+                    opacity: 0,
+                    animation: "fadeIn 0.5s forwards",
+                }}
+            >
+        <Typography fontSize='15px' sx={{ fontWeight: 700, lineHeight: 1.4, whiteSpace: 'pre-wrap' }}>
+          {showFull
+            ? sentences[sentenceIndex]
+            : words.slice(0, visibleWords).join(" ")}
+        </Typography>
+      </Box>
   );
 };
 

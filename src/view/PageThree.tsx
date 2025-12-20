@@ -26,15 +26,6 @@ const PageThree = () => {
                 images={images}
                 interval={4000}
             />
-            <Box 
-                borderRadius={5} bgcolor='#75d162ff' p={2.5}
-                sx={{
-                    width: { xs: 300, md: 400 },
-                    height: 50,
-                    opacity: 0,
-                    animation: "fadeIn 0.5s forwards",
-                }}
-            >
                 <SentenceRevealLoop
                     sentences={[
                         "Chúc mày một Giáng sinh ngập tràn yêu thương và những cái ôm ấm áp 🤗🎄",
@@ -47,7 +38,6 @@ const PageThree = () => {
                     wordInterval={600} // thời gian từng từ xuất hiện
                     holdTime={3000}    // giữ nguyên câu cuối vài giây
                 />
-            </Box>
             <style>
                 {`
                     @keyframes fadeIn {
